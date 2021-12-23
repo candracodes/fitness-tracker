@@ -11,16 +11,22 @@ For this assignment, you'll create a workout tracker. You have already been prov
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
 - [Packages](#packages)
-- [Libraries](#libraries)
+- [Contributors](#contributors)
 - [License](#Licensing)
 
 ## URLs
-- [Github Repo](#https://github.com/candracodes/fitness-tracker)
+- [Github Repo](https://github.com/candracodes/fitness-tracker)
 - [Deployed Heroku Application](#)
 - [Full Acceptance Criteria](./assets/README.md)
 
 ## Usage
-- TBD
+- To run this application locally:
+```
+1. Download the repo
+2. npm install
+3. npm run seed
+4. node server.js or npm start
+```
 
 ## User-Story
 
@@ -33,46 +39,26 @@ When the user loads the page, they should be given the option to create a new wo
 
 The user should be able to:
 
-  * Add exercises to the most recent workout plan.
+  * Add exercises to the most recent workout plan. ✅
 
-  * Add new exercises to a new workout plan.
+  * Add new exercises to a new workout plan. ✅
 
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
+  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page. ✅
 
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
+  * View the total duration of each workout from the past seven workouts on the `stats` page. ❌
 
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
-
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
-
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
-
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
 
 ## Packages
 
 This project is created using the following packages
-
 - [Node.JS](https://nodejs.org/en/)
 - [Express.JS](https://expressjs.com/)
-- [MySQL2](https://www.npmjs.com/package/mysql2)
-- [Express Handlebars](https://www.npmjs.com/package/express-handlebars)
-- [Sequelize](https://www.npmjs.com/package/sequelize)
-- [DOTENV](https://www.npmjs.com/package/dotenv)
-- [Bcrypt](https://www.npmjs.com/package/bcrypt)
-- [Express-Session](https://www.npmjs.com/package/express-session)
-- [Connect Session](https://www.npmjs.com/package/connect-session-sequelize)
-- [Express Validator](https://express-validator.github.io/docs/)
-- [MySQL Database Client for VSCode](https://github.com/cweijan/vscode-database-client)
+- [MongoDB](https://www.mongodb.com/)
+- [Mongoose](https://www.npmjs.com/package//mongoose)
+- [Morgan](https://www.npmjs.com/package/morgan)
 
-
-## Libraries
-
-This project is created using the following packages
-
-- [Bootstrap](https://getbootstrap.com/)
-- [jQuery](https://jquery.com/)
-
+## Contributors
+This project was made possible with the help of my bootcamp tutor, David Johnson.
 
 ## Licensing
 The project is made possible with the following Licensing:
