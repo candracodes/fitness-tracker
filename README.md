@@ -16,7 +16,7 @@ For this assignment, you'll create a workout tracker. You have already been prov
 
 ## URLs
 - [Github Repo](https://github.com/candracodes/fitness-tracker)
-- [Deployed Heroku Application](#)
+- [Deployed Heroku Application](https://candra-fitness-tracker.herokuapp.com/)
 - [Full Acceptance Criteria](./assets/README.md)
 
 ## Usage

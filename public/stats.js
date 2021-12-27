@@ -1,3 +1,4 @@
+// TODO: I tried to come up with a clever way to resolve the workout duration issue, but nothing seems to be working. Will revisit later
 function calculateTotalWeight(data) {
   const totals = [];
 
@@ -16,7 +17,7 @@ function calculateTotalWeight(data) {
 }
 
 function populateChart(data) {
-  const durations = data.map(({ totalDuration }) => totalDuration);
+  // const durations = data.map(({ totalDuration }) => totalDuration);
   const pounds = calculateTotalWeight(data);
 
   const line = document.querySelector('#canvas').getContext('2d');
@@ -42,7 +43,7 @@ function populateChart(data) {
           label: 'Workout Duration In Minutes',
           backgroundColor: 'red',
           borderColor: 'red',
-          data: durations,
+          // data: durations,
           fill: false,
         },
       ],
