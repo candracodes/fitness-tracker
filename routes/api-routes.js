@@ -10,13 +10,30 @@ const db = require("../models/exercise");
 router.get("/api/workouts", (req, res) => {
 	db.find()
 		.then((dbData) => {
-			// console.log(dbData);
 			res.json(dbData);
 		})
 		.catch((err) => {
 			res.json(err);
 		});
 });
+
+// TODO: Attempted to properly use $addFields and aggregate, but to no avail. Will revisit
+// router.get("/api/workouts", (req, res) => {
+// 	db.Workout.aggregate([{
+// 			$addFields: {
+// 				totalDuration: {
+// 					$sum: "$exercises.duration"
+// 				},
+// 			},
+// 		}, ])
+// 		.then((dbData) => {
+// 			res.json(data);
+// 		})
+// 		.catch((err) => {
+// 			console.log(err);
+// 			res.json(err);
+// 		});
+// });
 
 // GET request
 router.get("/api/workouts/range", (req, res) => {
@@ -29,8 +46,31 @@ router.get("/api/workouts/range", (req, res) => {
 		});
 });
 
+// TODO: Attempted to properly use $addFields and aggregate, but to no avail. Will revisit
+// router.get("/api/workouts/range", (req, res) => {
+// 	db.Workout.aggregate([{
+// 			$addFields: {
+// 				totalDuration: {
+// 					$sum: "$exercises.duration"
+// 				},
+// 				totalWeight: {
+// 					$sum: "$exercises.weight"
+// 				},
+// 			},
+// 		}, ])
+// 		.then((dbData) => {
+// 			res.json(data);
+// 		})
+// 		.catch((err) => {
+// 			console.log(err);
+// 			res.json(err);
+// 		});
+// });
+
 // POST workout
-router.post("/api/workouts", ({ body }, res) => {
+router.post("/api/workouts", ({
+	body
+}, res) => {
 	db.create(body)
 		.then((dbData) => {
 			res.json(dbData);
@@ -43,8 +83,15 @@ router.post("/api/workouts", ({ body }, res) => {
 // PUT/Update workout
 // TODO: Research set, trying to populate the duration in the line chart... , $set: { totalDuration: totalDuration}
 // TODO: Run a loop so that when you set the duration it updates each time
-router.put("/api/workouts/:id", ({ body, params }, res) => {
-	db.findByIdAndUpdate(params.id, { $push: { exercises: body } })
+router.put("/api/workouts/:id", ({
+	body,
+	params
+}, res) => {
+	db.findByIdAndUpdate(params.id, {
+			$push: {
+				exercises: body
+			}
+		})
 		.then((dbData) => {
 			console.log(body);
 			res.json(dbData);
