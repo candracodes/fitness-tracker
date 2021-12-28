@@ -2,7 +2,7 @@
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)
 
 ## Description
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+This application creates backend logic to existing frontend development for a Fitness Tracker. It requires the creation of a Mongo database with a Mongoose schema and handles routes with Express.
 
 ## Table of Contents
 - [Important URLs](#urls)
@@ -10,6 +10,7 @@ For this assignment, you'll create a workout tracker. You have already been prov
 - [Usage](#usage)
 - [User Story](#user-story)
 - [Acceptance Criteria](#acceptance-criteria)
+- [Mockup](#mockup)
 - [Packages](#packages)
 - [Contributors](#contributors)
 - [License](#Licensing)
@@ -47,6 +48,9 @@ The user should be able to:
 
   * View the total duration of each workout from the past seven workouts on the `stats` page. ❌
 
+## Mockup
+![Screenshot 1](./assets/screenshot1.png)
+![Screenshot 2](./assets/screenshot2.png)
 
 ## Packages
 
