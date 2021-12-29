@@ -66,7 +66,7 @@ This project was made possible with the help of my bootcamp tutor, David Johnson
 
 ## Licensing
 The project is made possible with the following Licensing:
-- [MIT](license.txt)
+- [MIT](LICENSE)
 
 
 
